@@ -3,8 +3,9 @@
 
 int CentrNumber (int num)
 {
-    Console.WriteLine(num);
     return (num / 10) % 10;
 }
 
-Console.WriteLine(CentrNumber(new Random().Next(100, 1000)));
+Console.WriteLine("Введите трёхзначное число: ");
+int n = int.Parse(Console.ReadLine());
+Console.WriteLine(CentrNumber(n));
