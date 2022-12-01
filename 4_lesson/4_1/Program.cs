@@ -1,15 +1,21 @@
 ﻿// Напишите программу, которая принимает 
 // на вход число и выдаёт количество цифр в числе.
 
-int SumNums(int num)
+int NumbCount(int n)
 {
-    int all_sum = 0;
-    for (int i = 1; i <= num; i++)
+    if(n == 0)
     {
-        all_sum += i;
+        return(1);
     }
-
-    return all_sum;
+    int count = 0;
+    while (n > 0)
+    {
+        n = n/10;
+        count++;
+    }
+    return count; 
+    
 }
+Console.WriteLine(NumbCount(int.Parse(Console.ReadLine())));
 
-Console.WriteLine(SumNums(int.Parse(Console.ReadLine())));
+
