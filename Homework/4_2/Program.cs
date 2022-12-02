@@ -4,24 +4,20 @@ void FillArray(int[] massiv)
 {
     for (int i = 0; i < massiv.Length; i++)
     {
-        massiv[i] = new Random().Next(1, 10);
+        massiv[i] = new Random().Next(1, 100);
     }
 }
 
-void PrintArray(int[] col)
+void PrintArray(int[] mas)
 {
-    int count = col.Length;
-    int position = 0;
-    while (position < count)
+    for (int i = 0; i < mas.Length; i++)
     {
-        Console.WriteLine(col[position]);
-        position++;
+        Console.WriteLine(mas[i]);
     }
 }
 
-//Console.WriteLine("Введите число элементов массива: ");
-//int array = new int[int.Parse(Console.ReadLine())];
-int[] array = new int [8];
+Console.Write("Введите число элементов массива: ");
+int[] array = new int[int.Parse(Console.ReadLine())];
 FillArray(array);
 PrintArray(array);
 
