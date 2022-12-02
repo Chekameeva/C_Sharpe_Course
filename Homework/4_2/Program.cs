@@ -1,11 +1,28 @@
-﻿// See https://aka.ms/new-console-template for more information
+﻿// Напишите программу, которая задаёт массив из 8 элементов и выводит их на экран
 
-int SumNums(int num)
-{    
-        num = num % 10;
-        return num;
+void FillArray(int[] massiv)
+{
+    for (int i = 0; i < massiv.Length; i++)
+    {
+        massiv[i] = new Random().Next(1, 10);
+    }
 }
-Console.WriteLine("Введите число: ");
-int n = int.Parse(Console.ReadLine());
 
-Console.WriteLine(SumNums(n));
+void PrintArray(int[] col)
+{
+    int count = col.Length;
+    int position = 0;
+    while (position < count)
+    {
+        Console.WriteLine(col[position]);
+        position++;
+    }
+}
+
+//Console.WriteLine("Введите число элементов массива: ");
+//int array = new int[int.Parse(Console.ReadLine())];
+int[] array = new int [8];
+FillArray(array);
+PrintArray(array);
+
+
