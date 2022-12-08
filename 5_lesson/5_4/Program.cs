@@ -37,3 +37,4 @@ int[] PairsNum(int[] arr)
 int[] arr_1 = Mass(5);
 Print(arr_1);
 int[] arr_1_new = PairsNum(arr_1);
+Print(arr_1_new);
