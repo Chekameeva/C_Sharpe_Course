@@ -30,10 +30,10 @@ int[,] MassNums(int row, int column, int from, int to)
 
 void Poisk(int[,] arr, int row1, int column1)
 {
-    if(row1 > arr.GetLength(0) || column1 > arr.GetLength(1))
-    Console.WriteLine($"Такого элемента нет");
+    if (row1 > arr.GetLength(0) || column1 > arr.GetLength(1))
+        Console.WriteLine($"Такого элемента нет");
     else
-    Console.WriteLine($"Элемент на позиции [{row1}, {column1}] равен {arr[row1-1, column1-1]}");
+        Console.WriteLine($"Элемент на позиции [{row1}, {column1}] равен {arr[row1 - 1, column1 - 1]}");
 }
 
 Console.Write("Enter the number of rows: ");
