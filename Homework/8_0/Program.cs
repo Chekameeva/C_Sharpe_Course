@@ -1,6 +1,36 @@
 ﻿// Задайте двумерный массив. Напишите программу, которая упорядочит 
 // по убыванию элементы каждой строки двумерного массива.
 
+int[,] MassNums(int row, int column, int from, int to)
+{
+    int[,] arr = new int[row, column];
+
+    for (int i = 0; i < row; i++)
+        for (int j = 0; j < column; j++)
+            arr[i, j] = new Random().Next(from, to);
+
+    return arr;
+}
+
+void Sort(int[,] array)
+{
+    for (int i = 0; i < array.GetLength(0); i++)
+    {
+        for (int j = 0; j < array.GetLength(1); j++)
+        {
+            for (int z = 0; z < array.GetLength(1) - 1; z++)
+            {
+                if (array[i, z] < array[i, z + 1])
+                {
+                    int temp = array[i, z + 1];
+                    array[i, z + 1] = array[i, z];
+                    array[i, z] = temp;
+                }
+            }
+        }
+    }
+}
+
 void Print(int[,] arr)
 {
     int row_size = arr.GetLength(0);
@@ -13,38 +43,6 @@ void Print(int[,] arr)
         Console.WriteLine();
     }
     Console.WriteLine();
-
-}
-
-int[,] MassNums(int row, int column, int from, int to)
-{
-    int[,] arr = new int[row, column];
-
-    for (int i = 0; i < row; i++)
-        for (int j = 0; j < column; j++)
-            arr[i, j] = new Random().Next(from, to);
-
-    return arr;
-}
-
-void Order (int[,] arr)
-{
-    for (int i = 0; i < arr.GetLength(0); i++)
-    {
-        for (int j = 0; j < arr.GetLength(1); j++)
-        {
-            for (int z = 0; z < arr.GetLength(1) - 1; z++)
-            {
-                if (arr[i, z] < arr[i, z + 1]);
-                {
-                    int temp = arr[i, z + 1];
-                    arr[i, z +1] = arr[i, z];
-                    arr[i, z] = temp;
-                }
-            }
-        }
-    }
-    Console.WriteLine($"Упорядоченный массив: ");
 }
 
 Console.Write("Enter the number of rows: ");
@@ -55,6 +53,8 @@ int column = int.Parse(Console.ReadLine());
 int[,] arr_1 = MassNums(row, column,
                         int.Parse(Console.ReadLine()),
                         int.Parse(Console.ReadLine()));
+
 Print(arr_1);
-Order(arr_1);
+Sort(arr_1);
+Console.WriteLine();
 Print(arr_1);
