@@ -48,6 +48,12 @@ void ChangeUp(int[,] arr)
     }
 
 }
+
+Console.Write("Enter the number of rows: ");
+int row = int.Parse(Console.ReadLine());
+Console.Write("Enter the number of columns: ");
+int column = int.Parse(Console.ReadLine());
+
 int[,] arr_1 = MassNums(row, column,
                         int.Parse(Console.ReadLine()),
                         int.Parse(Console.ReadLine()));

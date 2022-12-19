@@ -37,5 +37,5 @@ int column = int.Parse(Console.ReadLine());
 int[,] arr_1 = MassNums(row, column,
                         int.Parse(Console.ReadLine()),
                         int.Parse(Console.ReadLine()));
-Print(arr_1);
-FrequencyDic(arr_1);
+PrintMass(arr_1);
+FrequencyDict(arr_1);

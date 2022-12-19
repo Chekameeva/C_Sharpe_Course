@@ -48,7 +48,7 @@ Summ(arr_1);
 
 // ====================
 
-int Summ(int[,] arr)
+int Sum(int[,] arr)
 {
     int sum = 0;
     int row = arr.GetLength(0);
